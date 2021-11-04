@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.View.Configuration\AZK.AutoAnalytics.DesktopClient.View.Configuration.csproj" />
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.View.Controls\AZK.AutoAnalytics.DesktopClient.View.Controls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+
+</Project>

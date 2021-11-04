@@ -1,0 +1,171 @@
+﻿<Window x:Class="AZK.AutoAnalytics.DesktopClient.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AZK.AutoAnalytics.DesktopClient.View"
+        xmlns:visual_config="clr-namespace:AZK.AutoAnalytics.DesktopClient.View.Configuration;assembly=AZK.AutoAnalytics.DesktopClient.View.Configuration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="Header" Grid.Row="0" Background="Aquamarine">
+            <Image
+                Margin="5"
+                Width="45"
+                Height="45"
+                VerticalAlignment="Center" HorizontalAlignment="Left"
+                Source="Images/AZK_Icon.jpg"/>
+        </Grid>
+
+        <Grid Name="Content" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Name="ModelSearch">
+
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+
+                    <TextBlock
+                        FontSize="{Binding Source={x:Static visual_config:FontConfiguration.Instance},
+                            Path=MainFontSize}">
+                        Модель ТС:
+                    </TextBlock>
+
+                    <TextBox
+                        Width="250" Height="25"
+                        FontSize="{Binding Source={x:Static visual_config:FontConfiguration.Instance},
+                            Path=MainFontSize}" />
+
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Row="1" Name="DetailSelection">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical" Grid.Column="0" Margin="5">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="SelCaption" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                            Grid.Column="0">
+                            Группа:
+                        </TextBlock>
+                        <TextBox Grid.Column="1" Margin="3"></TextBox>
+                        <Button
+                            
+                            Background="White"
+                            Grid.Column="2" Margin="3">Выбрать</Button>
+                    </Grid>
+
+                    <Grid Grid.Row="1" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="SelCaption" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0">
+                                Подгруппа:
+                        </TextBlock>
+                        <TextBox Grid.Column="1" Margin="3"></TextBox>
+                        <Button
+                            Background="White"
+                            Grid.Column="2" Margin="3">Выбрать</Button>
+                    </Grid>
+
+                    <Grid Grid.Row="2" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="SelCaption" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0">
+                                Деталь:
+                        </TextBlock>
+                        <TextBox Grid.Column="1" Margin="3,3,3,3"></TextBox>
+                        <Button
+                            Background="White"
+                            Grid.Column="2" Margin="3,3,3,3" Grid.ColumnSpan="2">Выбрать</Button>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    Margin="5">
+                    <Label>Введенные поломки:</Label>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Группа</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Подруппа</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Деталь</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Name="Recommendations">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical">
+                    <Label>Рекомендации к проверке:</Label>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Группа</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Подруппа</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Деталь</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Width="1*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock>Вероятность</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
