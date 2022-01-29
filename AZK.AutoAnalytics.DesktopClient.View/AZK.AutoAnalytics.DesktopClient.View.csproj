@@ -7,12 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\AZK_Icon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.DI\AZK.AutoAnalytics.DesktopClient.DI.csproj" />
     <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.View.Configuration\AZK.AutoAnalytics.DesktopClient.View.Configuration.csproj" />
-    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.View.Controls\AZK.AutoAnalytics.DesktopClient.View.Controls.csproj" />
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.ViewModel\AZK.AutoAnalytics.DesktopClient.ViewModel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\AZK_Icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

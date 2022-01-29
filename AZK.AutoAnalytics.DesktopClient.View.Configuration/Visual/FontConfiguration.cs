@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -8,10 +7,22 @@ namespace AZK.AutoAnalytics.DesktopClient.View.Configuration
     {
         public static FontConfiguration Instance { get; set; } = new FontConfiguration();
 
-        public double MainFontSize { get; set; } = 26;
-        public double ElementsFontSize { get; set; } = 22;
-        public double AdditionalFontSize { get; set; } = 24;
-        public double TableFontSize { get; set; } = 22;
+        private double _mainFontSize = 22;
+        public double MainFontSize
+        {
+            get => _mainFontSize;
+            private set
+            {
+                if(_mainFontSize != value)
+                {
+                    _mainFontSize = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        //public double ElementsFontSize { get; set; } = 22;
+        //public double AdditionalFontSize { get; set; } = 18;
+        //public double TableFontSize { get; set; } = 22;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

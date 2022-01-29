@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.InMemoryModel\AZK.AutoAnalytics.DesktopClient.InMemoryModel.csproj" />
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.Model\AZK.AutoAnalytics.DesktopClient.IModel.csproj" />
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.ViewModel.DataTypes\AZK.AutoAnalytics.DesktopClient.Model.DataTypes.csproj" />
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.ViewModel.Helpers\AZK.AutoAnalytics.DesktopClient.ViewModel.Helpers.csproj" />
+  </ItemGroup>
+
+</Project>

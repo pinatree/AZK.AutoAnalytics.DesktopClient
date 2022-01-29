@@ -5,13 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.View", "AZK.AutoAnalytics.DesktopClient.View\AZK.AutoAnalytics.DesktopClient.View.csproj", "{0B4F7FC1-2FB6-4695-9B58-6E3602E28D8D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.View.Controls", "AZK.AutoAnalytics.DesktopClient.View.Controls\AZK.AutoAnalytics.DesktopClient.View.Controls.csproj", "{E86A1AD2-768F-4039-B10E-54E6986E2342}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.View.Configuration", "AZK.AutoAnalytics.DesktopClient.View.Configuration\AZK.AutoAnalytics.DesktopClient.View.Configuration.csproj", "{76B6B35E-8C1A-440D-8397-72EA1C39A068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZK.AutoAnalytics.DesktopClient.Model", "AZK.AutoAnalytics.DesktopClient.Model\AZK.AutoAnalytics.DesktopClient.Model.csproj", "{9B60CC60-6C93-4F8E-AAAB-3264443640CB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZK.AutoAnalytics.DesktopClient.Repository", "AZK.AutoAnalytics.DesktopClient.Repository\AZK.AutoAnalytics.DesktopClient.Repository.csproj", "{6D3EBE6C-77EC-4E04-A8F9-677EE4C2728B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.IModel", "AZK.AutoAnalytics.DesktopClient.Model\AZK.AutoAnalytics.DesktopClient.IModel.csproj", "{9B60CC60-6C93-4F8E-AAAB-3264443640CB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{9C9E9B7B-9059-48F0-B899-5E467A9B8988}"
 EndProject
@@ -21,7 +17,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModel", "ViewModel", "{EF7CD37C-1E43-43DC-9FD5-5D0050D8AD09}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{10F7E711-E81A-4EE4-8210-A254806539DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.ExcelReader", "AZK.AutoAnalytics.DesktopClient.ExcelReader\AZK.AutoAnalytics.DesktopClient.ExcelReader.csproj", "{98E6AE02-67FE-4509-851F-BCF2469ACCA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExcelReader", "ExcelReader", "{31C41007-221E-4A7C-A8C7-1D5A65CC88EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.ExcelReader.Tests", "AZK.AutoAnalytics.DesktopClient.ExcelReader.Tests\AZK.AutoAnalytics.DesktopClient.ExcelReader.Tests.csproj", "{999D8F4A-0013-4014-9E85-97F36E75E2BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.ViewModel", "AZK.AutoAnalytics.DesktopClient.ViewModel\AZK.AutoAnalytics.DesktopClient.ViewModel.csproj", "{BCDC07FD-38BE-4CBB-8772-EA3CA221B190}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{02C9E9A9-C0AD-4C06-BFDB-59C16FB1CA70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.ViewModel.Helpers", "AZK.AutoAnalytics.DesktopClient.ViewModel.Helpers\AZK.AutoAnalytics.DesktopClient.ViewModel.Helpers.csproj", "{820B7550-3EE5-46E2-BC2B-A29B3F31B597}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTypes", "DataTypes", "{6AA6987B-DCC6-4F56-B69D-93BDE12BE006}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.Model.DataTypes", "AZK.AutoAnalytics.DesktopClient.ViewModel.DataTypes\AZK.AutoAnalytics.DesktopClient.Model.DataTypes.csproj", "{018053AA-E723-4C0E-B532-5FE49C43A19C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{15C0164A-CBAB-4BFC-9487-18007C8D3D45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.DI", "AZK.AutoAnalytics.DesktopClient.DI\AZK.AutoAnalytics.DesktopClient.DI.csproj", "{6C66D11A-A031-4B3D-B3BC-7E8E7DC26DA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AZK.AutoAnalytics.DesktopClient.InMemoryModel", "AZK.AutoAnalytics.DesktopClient.InMemoryModel", "{8E12B117-FD58-44E2-B1E2-3C49D6A39591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AZK.AutoAnalytics.DesktopClient.InMemoryModel", "AZK.AutoAnalytics.DesktopClient.InMemoryModel\AZK.AutoAnalytics.DesktopClient.InMemoryModel.csproj", "{34A6194E-8AC1-4A1E-AF1F-EC729F7FF9CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +51,6 @@ Global
 		{0B4F7FC1-2FB6-4695-9B58-6E3602E28D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B4F7FC1-2FB6-4695-9B58-6E3602E28D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B4F7FC1-2FB6-4695-9B58-6E3602E28D8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E86A1AD2-768F-4039-B10E-54E6986E2342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E86A1AD2-768F-4039-B10E-54E6986E2342}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E86A1AD2-768F-4039-B10E-54E6986E2342}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E86A1AD2-768F-4039-B10E-54E6986E2342}.Release|Any CPU.Build.0 = Release|Any CPU
 		{76B6B35E-8C1A-440D-8397-72EA1C39A068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76B6B35E-8C1A-440D-8397-72EA1C39A068}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B6B35E-8C1A-440D-8397-72EA1C39A068}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,20 +59,52 @@ Global
 		{9B60CC60-6C93-4F8E-AAAB-3264443640CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B60CC60-6C93-4F8E-AAAB-3264443640CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B60CC60-6C93-4F8E-AAAB-3264443640CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D3EBE6C-77EC-4E04-A8F9-677EE4C2728B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D3EBE6C-77EC-4E04-A8F9-677EE4C2728B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D3EBE6C-77EC-4E04-A8F9-677EE4C2728B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D3EBE6C-77EC-4E04-A8F9-677EE4C2728B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E6AE02-67FE-4509-851F-BCF2469ACCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E6AE02-67FE-4509-851F-BCF2469ACCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E6AE02-67FE-4509-851F-BCF2469ACCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E6AE02-67FE-4509-851F-BCF2469ACCA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999D8F4A-0013-4014-9E85-97F36E75E2BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999D8F4A-0013-4014-9E85-97F36E75E2BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999D8F4A-0013-4014-9E85-97F36E75E2BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999D8F4A-0013-4014-9E85-97F36E75E2BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDC07FD-38BE-4CBB-8772-EA3CA221B190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDC07FD-38BE-4CBB-8772-EA3CA221B190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDC07FD-38BE-4CBB-8772-EA3CA221B190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDC07FD-38BE-4CBB-8772-EA3CA221B190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820B7550-3EE5-46E2-BC2B-A29B3F31B597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820B7550-3EE5-46E2-BC2B-A29B3F31B597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820B7550-3EE5-46E2-BC2B-A29B3F31B597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820B7550-3EE5-46E2-BC2B-A29B3F31B597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018053AA-E723-4C0E-B532-5FE49C43A19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018053AA-E723-4C0E-B532-5FE49C43A19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018053AA-E723-4C0E-B532-5FE49C43A19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018053AA-E723-4C0E-B532-5FE49C43A19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C66D11A-A031-4B3D-B3BC-7E8E7DC26DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C66D11A-A031-4B3D-B3BC-7E8E7DC26DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C66D11A-A031-4B3D-B3BC-7E8E7DC26DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C66D11A-A031-4B3D-B3BC-7E8E7DC26DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A6194E-8AC1-4A1E-AF1F-EC729F7FF9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A6194E-8AC1-4A1E-AF1F-EC729F7FF9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A6194E-8AC1-4A1E-AF1F-EC729F7FF9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A6194E-8AC1-4A1E-AF1F-EC729F7FF9CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0B4F7FC1-2FB6-4695-9B58-6E3602E28D8D} = {9C54C542-6C24-49DE-BE97-41D9DC038F67}
-		{E86A1AD2-768F-4039-B10E-54E6986E2342} = {9C54C542-6C24-49DE-BE97-41D9DC038F67}
 		{76B6B35E-8C1A-440D-8397-72EA1C39A068} = {89DB28CB-F871-4FC6-A2E5-8CC53B79DEDA}
 		{9B60CC60-6C93-4F8E-AAAB-3264443640CB} = {9C9E9B7B-9059-48F0-B899-5E467A9B8988}
-		{6D3EBE6C-77EC-4E04-A8F9-677EE4C2728B} = {9C9E9B7B-9059-48F0-B899-5E467A9B8988}
+		{98E6AE02-67FE-4509-851F-BCF2469ACCA4} = {31C41007-221E-4A7C-A8C7-1D5A65CC88EF}
+		{999D8F4A-0013-4014-9E85-97F36E75E2BE} = {31C41007-221E-4A7C-A8C7-1D5A65CC88EF}
+		{BCDC07FD-38BE-4CBB-8772-EA3CA221B190} = {EF7CD37C-1E43-43DC-9FD5-5D0050D8AD09}
+		{02C9E9A9-C0AD-4C06-BFDB-59C16FB1CA70} = {EF7CD37C-1E43-43DC-9FD5-5D0050D8AD09}
+		{820B7550-3EE5-46E2-BC2B-A29B3F31B597} = {02C9E9A9-C0AD-4C06-BFDB-59C16FB1CA70}
+		{6AA6987B-DCC6-4F56-B69D-93BDE12BE006} = {9C9E9B7B-9059-48F0-B899-5E467A9B8988}
+		{018053AA-E723-4C0E-B532-5FE49C43A19C} = {6AA6987B-DCC6-4F56-B69D-93BDE12BE006}
+		{6C66D11A-A031-4B3D-B3BC-7E8E7DC26DA6} = {15C0164A-CBAB-4BFC-9487-18007C8D3D45}
+		{8E12B117-FD58-44E2-B1E2-3C49D6A39591} = {9C9E9B7B-9059-48F0-B899-5E467A9B8988}
+		{34A6194E-8AC1-4A1E-AF1F-EC729F7FF9CA} = {8E12B117-FD58-44E2-B1E2-3C49D6A39591}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81B5AEF7-3F95-49CC-B1CB-2003418E20B6}

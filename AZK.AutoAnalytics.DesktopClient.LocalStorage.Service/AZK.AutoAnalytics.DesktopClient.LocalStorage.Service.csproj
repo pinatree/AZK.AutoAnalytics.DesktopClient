@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.Repository\AZK.AutoAnalytics.DesktopClient.LocalStorage.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

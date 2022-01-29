@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AZK.AutoAnalytics.DesktopClient.ExcelReader;
+using AZK.AutoAnalytics.DesktopClient.ExcelReader.DataTypes;
+using AZK.AutoAnalytics.DesktopClient.Model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +16,12 @@ namespace AZK.AutoAnalytics.DesktopClient.View
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            var reader = new ExcelRulesReader(@"C:\Users\pinat\Desktop\AZK\EXPORT_FROM_DEDUCTOR.xlsx");
+            List<AssocRule> readed = reader.ReadAssocRules(0, true, true);
+
+            InMemoryAssocRulesRepository.Instance = new InMemoryAssocRulesRepository(readed);
+        }
     }
 }
