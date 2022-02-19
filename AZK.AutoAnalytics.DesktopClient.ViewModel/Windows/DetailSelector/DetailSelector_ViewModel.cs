@@ -57,12 +57,14 @@ namespace AZK.AutoAnalytics.DesktopClient.ViewModel.Windows.DetailSelector
             }
         }
 
+        public bool DetailSelectionSuccess = false;
+
         public RelayCommand ConfirmDetailCommand { get; }
 
         public DetailSelector_ViewModel(IDetailSelectorModel model, Action onConfirm)
         {
             this._model = model;
-            this.ConfirmDetailCommand = new RelayCommand(onConfirm);
+            this.ConfirmDetailCommand = new RelayCommand(() => { DetailSelectionSuccess = true; onConfirm.Invoke(); });
         }
 
         private void UpdateFilteredDetails()

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using AZK.AutoAnalytics.DesktopClient.ExcelReader;
-using AZK.AutoAnalytics.DesktopClient.ExcelReader.DataTypes;
+﻿using System.Windows;
 using AZK.AutoAnalytics.DesktopClient.Model;
 using AZK.AutoAnalytics.DesktopClient.ViewModel.Windows.DetailSelector;
 
@@ -12,7 +9,17 @@ namespace AZK.AutoAnalytics.DesktopClient.View.Windows
         private DetailSelector_ViewModel _dataContext;
         public string SelectedDetail
         {
-            get => _dataContext.SelectedDetail;
+            get
+            {
+                if (_dataContext.DetailSelectionSuccess)
+                {
+                    return _dataContext.SelectedDetail;
+                }
+                else
+                {
+                    return "";
+                }
+            }
         }
 
         public DetailSelector()

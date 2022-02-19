@@ -10,7 +10,6 @@ using AZK.AutoAnalytics.DesktopClient.Model.DataTypes;
 using AZK.AutoAnalytics.DesktopClient.Model;
 using AZK.AutoAnalytics.DesktopClient.ExcelReader.DataTypes;
 
-
 namespace AZK.AutoAnalytics.DesktopClient.ViewModel.Windows.MainWindow
 {
     public sealed class MainWindow_ViewModel : IMainWindow_ViewModel, INotifyPropertyChanged
@@ -42,9 +41,14 @@ namespace AZK.AutoAnalytics.DesktopClient.ViewModel.Windows.MainWindow
 
         //Commands
         public RelayCommand SelectDetailCommand { get; }
+        public RelayCommand CloseWindowCommand { get; }
 
-        public MainWindow_ViewModel(IMainWindowModel model, Func<string> selectDetailCallback)
+        private Action _closeCallback;
+
+        public MainWindow_ViewModel(IMainWindowModel model, Func<string> selectDetailCallback, Action closeCallback)
         {
+            this._closeCallback = closeCallback;
+
             this._model = model;
 
             SelectDetailCommand = new RelayCommand(() =>
@@ -56,11 +60,23 @@ namespace AZK.AutoAnalytics.DesktopClient.ViewModel.Windows.MainWindow
                     AddDetail(newDetail);
                 }
             });
+
+            CloseWindowCommand = new RelayCommand(() => _closeCallback.Invoke());
         }
 
         private void AddDetail(string newDetail)
         {
-            DetailPath newPath = new DetailPath("-", "-", newDetail);
+            //костыль
+            Action<DetailPath> onRemoveFromList = new Action<DetailPath>((detPath) =>
+            {
+                FoundDamagedDetails.Remove(detPath);
+
+                UpdateRecommendations();
+
+                return;
+            });
+
+            DetailPath newPath = new DetailPath("-", "-", newDetail, onRemoveFromList);
 
             bool detailAlreadyFound = FoundDamagedDetails.Any(detPath => detPath.Equals(newPath));
 
@@ -103,6 +119,8 @@ namespace AZK.AutoAnalytics.DesktopClient.ViewModel.Windows.MainWindow
                                                 reliability: assocRule.Reliability.Value,
                                                 lift: assocRule.Lift.Value)).
                                                 ToList();
+            //Сортируем
+            newRecommendations = newRecommendations.OrderByDescending(x => x.Reliability).ToList();
 
             //Присваиваем на UI
             Recommendations = new ObservableCollection<Recommendation>(newRecommendations);

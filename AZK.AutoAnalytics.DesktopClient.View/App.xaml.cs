@@ -18,7 +18,7 @@ namespace AZK.AutoAnalytics.DesktopClient.View
     {
         public App()
         {
-            var reader = new ExcelRulesReader(@"C:\Users\pinat\Desktop\AZK\EXPORT_FROM_DEDUCTOR.xlsx");
+            var reader = new ExcelRulesReader(AppDomain.CurrentDomain.BaseDirectory + @"\AnalysisData\EXPORT_FROM_DEDUCTOR.xlsx");
             List<AssocRule> readed = reader.ReadAssocRules(0, true, true);
 
             InMemoryAssocRulesRepository.Instance = new InMemoryAssocRulesRepository(readed);

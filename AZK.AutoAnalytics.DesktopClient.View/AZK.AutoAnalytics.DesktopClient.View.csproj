@@ -2,17 +2,16 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AnalysisData\EXPORT_FROM_DEDUCTOR.xlsx" />
     <None Remove="Images\AZK_Icon.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.DI\AZK.AutoAnalytics.DesktopClient.DI.csproj" />
-    <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.View.Configuration\AZK.AutoAnalytics.DesktopClient.View.Configuration.csproj" />
     <ProjectReference Include="..\AZK.AutoAnalytics.DesktopClient.ViewModel\AZK.AutoAnalytics.DesktopClient.ViewModel.csproj" />
   </ItemGroup>
 
@@ -26,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="AnalysisData\EXPORT_FROM_DEDUCTOR.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Images\AZK_Icon.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

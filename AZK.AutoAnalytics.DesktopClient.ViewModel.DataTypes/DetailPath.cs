@@ -1,4 +1,7 @@
-﻿namespace AZK.AutoAnalytics.DesktopClient.Model.DataTypes
+﻿using AZK.AutoAnalytics.DesktopClient.ViewModel.Helpers.RelayCommand;
+using System;
+
+namespace AZK.AutoAnalytics.DesktopClient.Model.DataTypes
 {
     public class DetailPath
     {
@@ -8,11 +11,19 @@
 
         public string Detail { get; set; }
 
-        public DetailPath(string group, string subgroup, string detail)
+        public RelayCommand RemoveFromListCommand { get; }
+
+        private Action<DetailPath> _onNeedRemove;
+
+        public DetailPath(string group, string subgroup, string detail, Action<DetailPath> onNeedRemove = null)
         {
             this.Group = group;
             this.Subgroup = subgroup;
             this.Detail = detail;
+
+            _onNeedRemove = onNeedRemove;
+
+            RemoveFromListCommand = new RelayCommand(() => _onNeedRemove?.Invoke(this));
         }
 
         //Переопределяем оператор Equals

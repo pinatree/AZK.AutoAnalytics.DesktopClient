@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AZK.AutoAnalytics.DesktopClient.View.Windows"
         mc:Ignorable="d"
-        Title="Выбор детали" Height="450" Width="650">
+        Title="Выбор детали" Height="450" Width="650" WindowStyle="ToolWindow">
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal">
-            <Label>Название детали:</Label>
+            <Label Content="Название детали:"></Label>
             <TextBox
                 Text="{Binding Filter, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                 Margin="5" Name="DetailNameTB" Width="500" />
@@ -21,6 +21,8 @@
 
         <Button
             Command="{Binding ConfirmDetailCommand}"
-            IsEnabled="True" Background="White" Name="AcceptButton">Выбрать деталь</Button>
+            IsEnabled="True" Background="White" Name="AcceptButton">
+            <TextBlock Text="Выбрать деталь" />
+        </Button>
     </StackPanel>
 </Window>
