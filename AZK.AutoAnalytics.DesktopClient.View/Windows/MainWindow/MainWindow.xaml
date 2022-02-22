@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AZK.AutoAnalytics.DesktopClient.View"
         xmlns:header="clr-namespace:AZK.AutoAnalytics.DesktopClient.View.VisualElements.Header"
         mc:Ignorable="d"
-        Height="450" Width="1100" WindowStyle="None" AllowsTransparency="True">
+        Height="450" Width="1100" WindowStyle="None">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter
